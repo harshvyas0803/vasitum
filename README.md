@@ -39,7 +39,4 @@ A stunning and functional retractable sidebar for Next.js built on top of [shadc
    npm run dev
    ```
 
-
-#### Sheet menu
-
-<img src="/screenshots/screenshot-4.png" width="300">
+ 
