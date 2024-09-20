@@ -19,7 +19,7 @@ A stunning and functional retractable sidebar for Next.js built on top of [shadc
 - TypeScript
  
 ## Starting the project locally
-
+```
 1. Clone the repository
 
    ```bash
