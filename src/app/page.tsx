@@ -7,7 +7,11 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { useEffect, useState } from "react";
 
-const TypingText = ({ text }) => {
+interface TypingTextProps {
+  text: string;
+}
+
+const TypingText: React.FC<TypingTextProps> = ({ text }) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
