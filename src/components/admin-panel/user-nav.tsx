@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { LayoutGrid, LogOut, User } from "lucide-react"; // Consolidated imports
+import { LayoutGrid, LogOut, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { MessageSquareMore } from 'lucide-react';
-import { BellRing } from 'lucide-react';
+import { MessageSquareMore, BellRing } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-  TooltipProvider
+  TooltipProvider,
 } from "@/components/ui/tooltip";
 import {
   DropdownMenu,
@@ -18,7 +17,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 export function UserNav({ name = "Admirra John", email = "admirraj@example.com" }) {
@@ -31,10 +30,10 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
             type="text"
             placeholder="Search..."
             aria-label="Search"
-            className="border rounded-lg p-2 pl-10 pr-4 w-full focus:outline-none focus:ring focus:ring-blue-300"
+            className="border rounded-lg p-2 pl-10 pr-4 w-full focus:outline-none focus:ring focus:ring-blue-300 transition duration-300 ease-in-out transform hover:scale-105"
           />
           {/* Search Icon inside the input */}
-          <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 transition-transform duration-300 hover:scale-125">
             <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M16.5 10.5A6 6 0 108 10.5a6 6 0 008.5 0z" />
             </svg>
@@ -47,19 +46,19 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
         <TooltipProvider disableHoverableContent>
           <Tooltip>
             <TooltipTrigger asChild>
-              <div className="h-8 w-8 flex items-center justify-center border rounded cursor-pointer hover:border-[#0A337A] transition-colors">
-                <MessageSquareMore className="w-4 h-4 text-gray-500 hover:text-[#0A337A]" />
+              <div className="h-8 w-8 flex items-center justify-center border rounded cursor-pointer hover:border-[#0A337A] transition-colors duration-300 transform hover:scale-105">
+                <MessageSquareMore className="w-4 h-4 text-gray-500 hover:text-[#0A337A] transition-colors duration-300" />
               </div>
             </TooltipTrigger>
             <TooltipContent side="bottom">Messages</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <div className="h-8 w-8 flex items-center justify-center border rounded cursor-pointer hover:border-[#0A337A] transition-colors">
-                <BellRing className="w-4 h-4 text-gray-500 hover:text-[#0A337A]" />
+              <div className="h-8 w-8 flex items-center justify-center border rounded cursor-pointer hover:border-[#0A337A] transition-colors duration-300 transform hover:scale-105">
+                <BellRing className="w-4 h-4 text-gray-500 hover:text-[#0A337A] transition-colors duration-300" />
               </div>
             </TooltipTrigger>
-            <TooltipContent side="bottom">Notification</TooltipContent>
+            <TooltipContent side="bottom">Notifications</TooltipContent>
           </Tooltip>
         </TooltipProvider>
 
@@ -69,7 +68,7 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
             <Tooltip delayDuration={100}>
               <TooltipTrigger asChild>
                 <DropdownMenuTrigger asChild>
-                  <div className="relative h-8 w-8 rounded-full cursor-pointer">
+                  <div className="relative h-8 w-8 rounded-full cursor-pointer hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
                     <Avatar className="h-8 w-8">
                       <AvatarImage src="../profile.png" alt="Profile Image" />
                       <AvatarFallback className="bg-transparent">{name.charAt(0)}</AvatarFallback>
@@ -90,13 +89,13 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem className="hover:cursor-pointer" asChild>
+              <DropdownMenuItem className="hover:cursor-pointer transition-transform duration-300 transform hover:scale-105" asChild>
                 <Link href="/dashboard" className="flex items-center">
                   <LayoutGrid className="w-4 h-4 mr-3 text-muted-foreground" />
                   Dashboard
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:cursor-pointer" asChild>
+              <DropdownMenuItem className="hover:cursor-pointer transition-transform duration-300 transform hover:scale-105" asChild>
                 <Link href="/account" className="flex items-center">
                   <User className="w-4 h-4 mr-3 text-muted-foreground" />
                   Account
@@ -104,7 +103,7 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="hover:cursor-pointer" onClick={() => {}}>
+            <DropdownMenuItem className="hover:cursor-pointer transition-transform duration-300 transform hover:scale-105" onClick={() => {}}>
               <LogOut className="w-4 h-4 mr-3 text-muted-foreground" />
               Sign out
             </DropdownMenuItem>
