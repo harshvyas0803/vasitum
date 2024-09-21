@@ -51,7 +51,7 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
                 <MessageSquareMore className="w-4 h-4 text-gray-500 hover:text-[#0A337A]" />
               </div>
             </TooltipTrigger>
-            <TooltipContent side="bottom">Notifications</TooltipContent>
+            <TooltipContent side="bottom">Messages</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -59,7 +59,7 @@ export function UserNav({ name = "Admirra John", email = "admirraj@example.com" 
                 <BellRing className="w-4 h-4 text-gray-500 hover:text-[#0A337A]" />
               </div>
             </TooltipTrigger>
-            <TooltipContent side="bottom">Messages</TooltipContent>
+            <TooltipContent side="bottom">Notification</TooltipContent>
           </Tooltip>
         </TooltipProvider>
 
